@@ -29,7 +29,7 @@ ESTUTURA BÁSICA YII2
 REQUISITOS
 ----------
 
-O requisito mínimo para este projeto é o PHP 7.2.33 ou superior.
+O requisito mínimo para este projeto é o PHP 7.2.33 e Mysql 5.7.31.
 
 
 INSTALAÇÃO
@@ -39,6 +39,12 @@ INSTALAÇÃO
 
 ~~~
 composer update OU composer install
+~~~
+
+### Banco de Dados
+
+~~~
+Realizar o restore do arquivo `banco.sql`.
 ~~~
 
 ### Acesse o aplicativo por meio do seguinte URL:
