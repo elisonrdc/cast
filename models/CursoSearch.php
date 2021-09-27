@@ -72,19 +72,19 @@ class CursoSearch extends Curso
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'id_categoria' => $this->id_categoria,
-            'qtd_alunos_turma' => $this->qtd_alunos_turma,
+            'curso.id' => $this->id,
+            'curso.id_categoria' => $this->id_categoria,
+            'curso.qtd_alunos_turma' => $this->qtd_alunos_turma,
         ]);
 
-        $query->andFilterWhere(['like', 'descricao', $this->descricao]);
+        $query->andFilterWhere(['like', 'curso.descricao', $this->descricao]);
 
         if($this->data_inicio) {
-            $query->andFilterWhere(['=', 'data_inicio', Utils::getDate($this->data_inicio)]);
+            $query->andFilterWhere(['=', 'curso.data_inicio', Utils::getDate($this->data_inicio)]);
         }
 
         if($this->data_inicio) {
-            $query->andFilterWhere(['=', 'data_fim', Utils::getDate($this->data_fim)]);
+            $query->andFilterWhere(['=', 'curso.data_fim', Utils::getDate($this->data_fim)]);
         }
 
         return $dataProvider;
